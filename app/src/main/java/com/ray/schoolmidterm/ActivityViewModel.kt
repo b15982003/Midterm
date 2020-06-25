@@ -6,6 +6,8 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import com.ray.schoolmidterm.data.PostData
 import kotlinx.android.synthetic.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ActivityViewModel :ViewModel() {
 
@@ -30,7 +32,7 @@ class ActivityViewModel :ViewModel() {
                         val postData = PostData(
                             email = document.getString("email"),
                             title = document.getString("title"),
-                            id = document.getString("id"),
+                            id = document.getString("author.id"),
                             name = document.getString("author.name"),
                             content = document.getString("content"),
                             createdTime = document.getLong("createdTime"),
@@ -45,6 +47,15 @@ class ActivityViewModel :ViewModel() {
                     Log.w("RAy", "Error getting documents.", task.exception)
                 }
             }
+    }
+    fun getDateTime(s: Long): String? {
+        try {
+            val sdf = SimpleDateFormat("MM/dd/yyyy")
+            val netDate = Date(s)
+            return sdf.format(netDate)
+        } catch (e: Exception) {
+            return e.toString()
+        }
     }
 
 }

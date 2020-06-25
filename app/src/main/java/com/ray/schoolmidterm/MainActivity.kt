@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    val adapter = ActivityAdapter()
+
 //    val nav = Navigation.findNavController(this,)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,13 +33,13 @@ class MainActivity : AppCompatActivity() {
         binding.addButton.setOnClickListener() {
             addData()
         }
-
+        val adapter = ActivityAdapter(viewModel)
         binding.postList.adapter = adapter
         //read
 
         viewModel.post.observe(this, androidx.lifecycle.Observer {
             it?.let {
-                adapter.submitList(it)
+                (binding.postList.adapter as ActivityAdapter).submitList(it)
                 Log.d("Rayggg", "${it}")
             }
         })

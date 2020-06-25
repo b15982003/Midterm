@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -11,7 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/activity_title"
@@ -42,7 +43,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="@{viewModel.id}" />
+             />
 
         <TextView
             android:id="@+id/activity_text3"
@@ -54,16 +55,27 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@{viewModel.content}" />
+            android:text="@{viewModel.content}"
+            app:layout_goneMarginBottom="5dp"
+            />
 
         <TextView
             android:id="@+id/activity_button"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/activity_text1"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="TextView" />
+            android:text="@{viewModel.tag}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_title" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

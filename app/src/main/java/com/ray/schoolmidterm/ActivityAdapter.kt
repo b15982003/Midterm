@@ -9,15 +9,22 @@ import com.ray.schoolmidterm.data.PostData
 import com.ray.schoolmidterm.databinding.ItemActivityMainRecyBinding
 
 
-class ActivityAdapter : ListAdapter<PostData, ActivityAdapter.ActivityViewModelHolder>(DiffCallback) {
+class ActivityAdapter(val viewModel: ActivityViewModel) : ListAdapter<PostData, ActivityAdapter.ActivityViewModelHolder>(DiffCallback) {
 
 
     class ActivityViewModelHolder(private var binding: ItemActivityMainRecyBinding):
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(postData: PostData ) {
+        fun bind(
+            postData: PostData,
+            viewModel: ActivityViewModel
+        ) {
             binding.viewModel = postData
 
+            binding.activityText2.text = postData.createdTime?.let { viewModel.getDateTime(it) }
+
             binding.executePendingBindings()
+
+
         }
     }
 
@@ -47,7 +54,7 @@ class ActivityAdapter : ListAdapter<PostData, ActivityAdapter.ActivityViewModelH
      */
     override fun onBindViewHolder(holder: ActivityViewModelHolder, position: Int) {
         val postData = getItem(position)
-        holder.bind(postData)
+        holder.bind(postData,viewModel)
     }
 }
 
