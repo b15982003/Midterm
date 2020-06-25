@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "1067568476785",
+    "firebase_url": "https://schoolmidterm-e7cd4.firebaseio.com",
+    "project_id": "schoolmidterm-e7cd4",
+    "storage_bucket": "schoolmidterm-e7cd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067568476785:android:00ab6c45310b044f3a61d0",
+        "android_client_info": {
+          "package_name": "com.ray.Schoolmidterm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067568476785-fun0ivr0v08ksnlbho5jtp16h1bjjhqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNcVsjZUKAQQaubRJXiYfBLtMb_QnpFM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067568476785-fun0ivr0v08ksnlbho5jtp16h1bjjhqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067568476785:android:8bfc9370b905e9fa3a61d0",
+        "android_client_info": {
+          "package_name": "com.ray.schoolmidterm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067568476785-65f5esdl2fj8aacgnrh6075aiu8ot9bq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ray.schoolmidterm",
+            "certificate_hash": "d43ec34043d1712361507b1502d08beebfed8f9c"
+          }
+        },
+        {
+          "client_id": "1067568476785-fun0ivr0v08ksnlbho5jtp16h1bjjhqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNcVsjZUKAQQaubRJXiYfBLtMb_QnpFM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067568476785-fun0ivr0v08ksnlbho5jtp16h1bjjhqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
